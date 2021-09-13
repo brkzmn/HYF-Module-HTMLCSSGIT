@@ -1,5 +1,5 @@
 1.) How do I create a hidden file or folder? How do I display it in the CLI?
-	When creating or renaming documents or files, confidential documents or files can be created by putting a period (.) at the 	beginning of the document or file's name.
+	When creating or renaming folder or files, hidden folder or files can be created by putting a dot (.) at the beginning of the folder or file's name.
 	e.g.
 
 	burakozmen$ mkdir .hiddenfolder
