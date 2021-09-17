@@ -10,4 +10,4 @@ It opens VS Code
 
 ## `mv testfile.txt newtestfile.txt`
 
-It moves files or remanes
+It moves files/folders or renames
