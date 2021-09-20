@@ -1,0 +1,233 @@
+@font-face {
+  font-family: Lato-Regular;
+  src: url(fonts/Lato-Regular.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: Padauk-Bold;
+  src: url(fonts/Padauk-Bold.ttf);
+  font-weight: 700;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: Lato-Regular;
+  background-color: #f7f9fb;
+}
+
+header {
+  background-color: #333;
+  text-align: center;
+  min-height: 100px;
+  color: coral;
+  padding-top: 30px;
+}
+main {
+  width: 80%;
+  margin: auto;
+  background-color: #eee;
+  margin-top: 20px;
+  box-shadow: 0px 0px 11px 5px rgba(0, 0, 0, 0.5);
+}
+h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-family: "Padauk-Bold", sans-serif;
+}
+h2 {
+  font-family: "Padauk-Bold", sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+h3 {
+  background-color: #fcde67;
+  font-family: "Padauk-Bold", sans-serif;
+  font-size: 1.8rem;
+  line-height: 2rem;
+  padding: 5px;
+  transition: 0.4s linear;
+}
+
+p {
+  transition: 0.5s ease;
+  font-size: 1.1rem;
+  color: gray;
+  padding: 10px;
+}
+
+main section:nth-child(1) {
+  padding-top: 20px;
+}
+
+ul {
+  list-style: none;
+}
+
+.grid-item img {
+  width: 100%;
+  max-height: 60%;
+  background-color: white;
+  transition: transform 0.6s ease;
+}
+
+.grid-item:hover img {
+  transform: scale(1.1);
+}
+
+.grid-item:hover p {
+  color: #fcde67;
+}
+
+.grid-item:hover h3 {
+  padding-top: 15px;
+}
+
+.grid-floats .grid-item p {
+  position: absolute;
+  max-height: 25%;
+  bottom: 0px;
+  overflow: auto;
+}
+
+/* layout with float ****/
+
+.grid-floats {
+  background-color: #2d2d2d;
+  overflow: auto;
+}
+
+.grid-floats .grid-item {
+  border: 1px solid white;
+  float: left;
+  width: calc(25% - 10px);
+  height: 500px;
+  position: relative;
+  overflow: auto;
+  margin-bottom: 20px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.grid-floats .grid-item h3 {
+  text-align: center;
+  height: 90px;
+}
+
+.grid-floats li:nth-child(1) {
+  width: calc(50% - 10px);
+  border: 1px solid white;
+}
+
+/* layout with flexbox *******************/
+
+.grid-flex {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #2d2d2d;
+  justify-content: space-between;
+}
+
+.grid-flex .grid-item {
+  display: flex;
+  flex-basis: calc(25% - 10px);
+  flex-direction: column;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 30px;
+  border: 1px solid white;
+  padding-bottom: 10px;
+}
+.grid-flex .grid-item h3 {
+  background-color: #fcde67;
+  flex-basis: 93px;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+/* When I set the flex-basis as a percentage for ".grid-flex .grid-item h3" element, the p element in the same flexbox did not fit inside the flexbox and overflowed. 
+However I later realized that this problem is caused by setting a percentage value for flex-basis property. That's why I gave the value in px. Problem solved. */
+
+.grid-flex li:last-of-type {
+  margin-right: auto;
+}
+
+.grid-flex .grid-item img {
+  width: 100%;
+  max-height: 60%;
+  background-color: white;
+  margin-bottom: auto;
+}
+
+.grid-flex .grid-item {
+  overflow-x: hidden;
+}
+
+.grid-floats .grid-item {
+  overflow-x: hidden;
+}
+
+/* media query for tablets */
+
+@media only screen and (min-width: 600px) and (max-width: 1023px) {
+  .grid-floats .grid-item {
+    float: left;
+    width: calc(33.333% - 10px);
+    height: 400px;
+  }
+
+  .grid-floats li:nth-child(1) {
+    float: left;
+    max-width: calc(50% - 10px);
+    height: 500px;
+  }
+  .grid-floats li:nth-child(2) {
+    width: calc(50% - 10px);
+    border: 1px solid white;
+    height: 500px;
+  }
+
+  .grid-flex .grid-item {
+    flex-basis: calc(33.333% - 10px);
+  }
+}
+
+/* media query for mobile phones */
+
+@media only screen and (max-width: 599px) {
+  .grid-floats {
+    padding: 10px;
+  }
+
+  .grid-floats .grid-item {
+    float: none;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 30px;
+  }
+
+  .grid-floats li:nth-child(1) {
+    float: none;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 30px;
+  }
+
+  .grid-flex .grid-item {
+    flex-basis: 100%;
+  }
+
+  .grid-flex .grid-item {
+    margin: auto;
+    margin-bottom: 30px;
+  }
+  ul.grid-flex {
+    padding: 10px;
+  }
+}
