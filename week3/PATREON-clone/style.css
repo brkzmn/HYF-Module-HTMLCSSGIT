@@ -1,0 +1,304 @@
+body {
+  font-size: 16px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(36, 30, 18);
+}
+header {
+  min-height: 64px;
+  display: flex;
+  color: rgb(36, 30, 18);
+}
+h1 {
+  color: rgb(255, 66, 77);
+}
+/* NAVBAR */
+
+nav {
+  display: inline;
+  color: rgb(36, 30, 18);
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  width: 100%;
+}
+nav ul {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+nav ul {
+  list-style: none;
+}
+nav ul li {
+  margin-left: 10px;
+}
+nav ul li a {
+  color: rgb(36, 30, 18);
+}
+nav header i {
+  background-color: rgb(255, 255, 255);
+}
+.s-kits {
+  margin-right: auto;
+}
+.btn {
+  border-radius: 9999px;
+  background-color: rgb(255, 66, 77);
+  display: inline;
+}
+
+.button {
+  border-radius: 9999px;
+  background-color: rgb(255, 66, 77);
+  display: inline;
+}
+.input {
+  align-self: flex-end;
+}
+.nav-mobile {
+  display: none;
+}
+
+.menu-icon {
+  color: black;
+}
+ul.nav-mobile {
+}
+/* landing section */
+.landing {
+  background: #141518;
+}
+.let-your {
+  color: rgb(255, 255, 255);
+}
+/* .get-started {
+  border-radius: 9999px;
+  background-color: rgb(255, 66, 77);
+  display: inline;
+  text-transform: capitalize;
+  letter-spacing: 0.1rem;
+} */
+.btn {
+  border-radius: 9999px;
+  background-color: rgb(255, 66, 77);
+  display: inline;
+  text-transform: capitalize;
+  letter-spacing: 0.1rem;
+}
+
+.first-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.get-started:hover {
+  background-color: rgb(255, 66, 77);
+}
+
+.landing .container {
+  display: flex;
+}
+
+.landing .container > div {
+  padding-top: 6.5rem;
+  padding-bottom: 5.5rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  flex-basis: 50%;
+}
+.div-gif div {
+  position: relative;
+}
+.div-gif i {
+  position: absolute;
+  font-size: 6rem;
+  top: 45%;
+  left: 45%;
+  color: #ff434d;
+}
+
+/* second-section */
+
+.creators-patreon {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.creators-patreon h2 {
+  margin-bottom: 2rem;
+}
+.second-sbar {
+  display: flex;
+}
+.second-section {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+/* third-section  */
+.third-section {
+  text-align: center;
+  padding-bottom: 6rem;
+}
+.third-section p {
+  font-size: 1.25rem;
+  line-height: 2;
+  width: 80%;
+  margin: auto;
+}
+
+/* forth-section  */
+
+/* .forth-section .container {
+  display: flex;
+  width: 100%;
+} */
+/* .develop {
+  width: 60%;
+}
+.mikki {
+  width: 40%;e
+} */
+.box-creators {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+.develop {
+  flex-basis: 40%;
+  order: 1;
+}
+.mikki {
+  flex-basis: 40%;
+  order: 2;
+}
+.take-back {
+  flex-basis: 40%;
+  order: 2;
+}
+.kev {
+  flex-basis: 40%;
+  order: 1;
+}
+.build-direct {
+  flex-basis: 40%;
+  order: 1;
+}
+
+.bexey {
+  flex-basis: 40%;
+  order: 2;
+}
+
+.creators-heading {
+  font-size: 2.125rem;
+  color: rgb(255, 66, 77);
+}
+
+/* fifth-section */
+.fifth-section .container {
+  display: flex;
+}
+/* connection-section */
+.connection {
+  text-align: center;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  background-color: #fafbfc;
+}
+
+/* footer **************************** */
+.page-footer {
+  height: auto;
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+  padding-bottom: 20px;
+}
+.page-footer h3 {
+  font-size: 0.8rem;
+}
+.page-footer .container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.language-options {
+  flex-basis: 33.333%;
+
+  height: 100px;
+}
+.product {
+  flex-basis: 16%;
+}
+.for-creators {
+  flex-basis: 16%;
+}
+.resources {
+  flex-basis: 16%;
+}
+.company {
+  flex-basis: 16%;
+}
+.address {
+  flex-basis: 100%;
+}
+.media-icons i {
+  color: white;
+}
+
+/* media queries */
+@media screen and (min-width: 1025px) {
+  .navbar-fixed nav {
+    height: 64px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .landing .container {
+    flex-direction: column;
+  }
+
+  .landing .container div {
+    flex-basis: 100%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .nav-desktop {
+    display: none;
+  }
+  .nav-mobile {
+    display: flex;
+  }
+  .input {
+    width: 100%;
+    background: white;
+    padding: 0px;
+    margin: 0px;
+  }
+  .page-footer .container {
+    width: 100%;
+    padding: 2rem;
+  }
+  .language-options {
+    flex-basis: 100%;
+    flex-shrink: 0;
+  }
+  .product {
+    flex-basis: 50%;
+  }
+  .for-creators {
+    flex-basis: 50%;
+  }
+  .resources {
+    flex-basis: 50%;
+  }
+  .company {
+    flex-basis: 50%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .fifth-section .container {
+    flex-direction: column;
+  }
+}
