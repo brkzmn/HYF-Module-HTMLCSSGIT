@@ -483,4 +483,12 @@ article.card {
     top: 24%;
     left: 36%;
   }
+  nav ul a.btn {
+    margin-right: 20px;
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+  nav .sidenav-trigger {
+    right: -13px;
+  }
 }
