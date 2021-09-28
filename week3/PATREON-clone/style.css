@@ -1,10 +1,21 @@
 /* *:focus {
   background: transparent;
 } */
+@font-face {
+  font-family: montserrat-regular;
+  src: url(fonts/Montserrat-Regular.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: montserrat-bold;
+  src: url(fonts/Montserrat-Bold.ttf);
+}
+
 body {
   font-size: 16px;
   background-color: rgb(255, 255, 255);
   color: rgb(36, 30, 18);
+  font-family: "montserrat-regular", sans-serif;
 }
 header {
   min-height: 64px;
@@ -14,7 +25,15 @@ header {
 h1 {
   color: rgb(255, 66, 77);
 }
+h2 {
+  font-family: "montserrat-bold", sans-serif;
+  font-size: 2.8rem;
+}
+
 /* NAVBAR */
+.navbar-fixed .nav-wrapper {
+  width: 100%;
+}
 
 nav {
   display: inline;
@@ -31,9 +50,7 @@ nav ul {
 nav ul {
   list-style: none;
 }
-nav ul li {
-  margin-left: 10px;
-}
+
 nav ul li a {
   color: rgb(36, 30, 18);
 }
@@ -41,11 +58,25 @@ nav header i {
   background-color: rgb(255, 255, 255);
 }
 
-.btn-large {
-  padding-top: 10px;
-  padding-bottom: 10px;
+.navbar-fixed nav {
+  border-bottom: 1px solid #f5f4f2;
+}
+.login-area {
+  position: absolute;
+  top: 0px;
+  right: 5px;
+  z-index: 1;
 }
 
+nav ul a.btn {
+  margin: 0;
+  border: 2px solid rgb(255, 66, 77);
+}
+nav ul a.btn:hover {
+  border: 2px solid rgb(255, 66, 77);
+  background: white;
+  color: rgb(255, 66, 77);
+}
 .firstbar-box {
   height: 40px;
   margin-top: 12px;
@@ -60,35 +91,36 @@ nav header i {
   background-color: #f5f4f2;
   border-radius: 9999px;
 }
+
+/* I could not change the values ​​originating from the framework. I used id to do this. */
 nav .input-field label {
   top: -9px;
 }
 .s-kits {
   margin-right: auto;
 }
-.btn {
-  border-radius: 9999px;
-  background-color: rgb(255, 66, 77);
-  display: inline;
-}
 
-.button {
-  border-radius: 9999px;
-  background-color: rgb(255, 66, 77);
-  display: inline;
-}
-/* .input {
-  align-self: flex-end;
-} */
+/* mobile navbar */
 .nav-mobile {
   display: none;
 }
 
-.menu-icon {
-  color: black;
+.thirdbar {
+  padding: 2px;
+  background-color: #f5f4f2;
+  border-radius: 9999px;
+  width: 96%;
+  margin: auto;
 }
-ul.nav-mobile {
+#search3 {
+  background-color: #f5f4f2;
+  border-radius: 9999px;
 }
+
+.thirdbar .input-field label {
+  top: -17px;
+}
+
 /* landing section */
 .landing {
   background: #141518;
@@ -100,18 +132,25 @@ ul.nav-mobile {
 .btn {
   border-radius: 9999px;
   background-color: rgb(255, 66, 77);
-  display: inline;
   text-transform: capitalize;
   letter-spacing: 0.1rem;
+  margin: 0px;
+  line-height: 36px;
+  padding-top: 4px;
+  height: 46px;
+}
+
+.btn:hover {
+  background-color: rgb(255, 66, 77);
+}
+.btn:focus {
+  background-color: rgb(255, 66, 77);
 }
 
 .first-heading {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-}
-.get-started:hover {
-  background-color: rgb(255, 66, 77);
 }
 
 .landing .container {
@@ -137,11 +176,15 @@ ul.nav-mobile {
 }
 
 /* second-section */
+.second-section {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
 .secondbar-box {
   display: flex;
 }
 .secondbar {
-  flex-basis: 80%;
+  flex-basis: 90%;
   margin-right: 20px;
   padding: 2px;
   background-color: #f5f4f2;
@@ -150,6 +193,7 @@ ul.nav-mobile {
 
 #search2 {
   background-color: #f5f4f2;
+  border-radius: 9999px;
 }
 .creators-patreon {
   flex-basis: 100%;
@@ -158,20 +202,14 @@ ul.nav-mobile {
   align-items: flex-start;
 }
 
-.creators-patreon h2 {
-  margin-bottom: 2rem;
-}
 .second-sbar {
   display: flex;
 }
-.second-section {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-}
+
 /* third-section  */
 .third-section {
   text-align: center;
-  padding-bottom: 6rem;
+  padding: 0rem 0rem 6rem;
 }
 .third-section p {
   font-size: 1.25rem;
@@ -179,48 +217,88 @@ ul.nav-mobile {
   width: 80%;
   margin: auto;
 }
-
+/* forth-section */
+.forth-section {
+  padding: 6rem 0rem;
+}
 .box-creators {
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   margin-top: 50px;
+}
+.box-creators p {
+  margin-top: 0px;
 }
 .develop {
   flex-basis: 40%;
   order: 1;
+  padding: 0px 8px;
 }
 .mikki {
   flex-basis: 40%;
   order: 2;
+  padding: 0px 8px;
 }
 .take-back {
   flex-basis: 40%;
   order: 2;
+  padding: 0px 8px;
 }
 .kev {
   flex-basis: 40%;
   order: 1;
+  padding: 0px 8px;
 }
 .build-direct {
   flex-basis: 40%;
   order: 1;
+  padding: 0px 8px;
 }
 
 .bexey {
   flex-basis: 40%;
   order: 2;
+  padding: 0px 8px;
 }
 
 .creators-heading {
+  font-family: "montserrat-bold", sans-serif;
   font-size: 2.125rem;
   color: rgb(255, 66, 77);
+  text-align: left;
 }
 
 /* fifth-section */
+.fifth-section {
+  padding: 6rem 0rem;
+}
 .fifth-section .container {
   display: flex;
+  justify-content: space-around;
+}
+
+article.card {
+  flex-basis: calc(33% - 30px);
+  padding-right: 10px;
+  padding-left: 10px;
+  text-align: left;
+}
+.card .card-content {
+  padding-left: 0px;
+}
+.card .card-content h5 {
+  font-size: 1.5rem;
+  font-family: "montserrat-bold", sans-serif;
+}
+.card .card-content p {
+  margin-top: 23px;
+  margin-bottom: 18px;
+}
+.card .card-content a {
+  color: black;
+  text-decoration: underline;
 }
 /* connection-section */
 .connection {
@@ -246,8 +324,13 @@ ul.nav-mobile {
 }
 .language-options {
   flex-basis: 33.333%;
-
-  height: 100px;
+  height: auto;
+}
+.options-box {
+  border: 1px solid white;
+  margin-bottom: 5px;
+  border-radius: 15px;
+  max-width: 80%;
 }
 .product {
   flex-basis: 16%;
@@ -274,22 +357,28 @@ ul.nav-mobile {
     height: 64px;
   }
 }
-
-@media screen and (max-width: 767px) {
-  .landing .container {
-    flex-direction: column;
-  }
-
-  .landing .container div {
-    flex-basis: 100%;
-  }
-}
 @media screen and (max-width: 1024px) {
+  .navbar-fixed nav {
+    height: 110px;
+  }
   .nav-desktop {
+    display: none;
+  }
+  .login-area {
     display: none;
   }
   .nav-mobile {
     display: flex;
+    flex-direction: column;
+    padding-right: 8px;
+    padding-left: 5px;
+  }
+  .mobile-icon {
+    color: black;
+    margin-right: auto;
+  }
+  .container {
+    width: 90%;
   }
 
   .page-footer .container {
@@ -299,6 +388,9 @@ ul.nav-mobile {
   .language-options {
     flex-basis: 100%;
     flex-shrink: 0;
+  }
+  .options-box {
+    max-width: 33%;
   }
   .product {
     flex-basis: 50%;
@@ -312,7 +404,59 @@ ul.nav-mobile {
   .company {
     flex-basis: 50%;
   }
+  ul li {
+    font-size: 1rem;
+  }
 }
+
+@media screen and (max-width: 767px) {
+  h1 {
+    font-size: 2.3rem;
+  }
+  .landing .container {
+    flex-direction: column;
+  }
+
+  .landing .container div {
+    flex-basis: 100%;
+  }
+  .secondbar-box {
+    flex-direction: column;
+  }
+  .secondbar {
+    flex-basis: 100%;
+    margin-right: 0;
+  }
+
+  .secondbar-box .btn {
+    flex-basis: 80%;
+    margin-right: 20px;
+    width: 100%;
+    margin-top: 10px;
+  }
+  .forth-section .container {
+    width: 96%;
+  }
+  .box-creators {
+    flex-direction: column;
+  }
+  .kev {
+    order: 2;
+  }
+  .take-back {
+    order: 1;
+  }
+  .box-creators .responsive-img {
+    width: 100%;
+  }
+  .box-creators p {
+    text-align: justify;
+  }
+  .btn {
+    font-size: 1rem;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .fifth-section .container {
     flex-direction: column;
