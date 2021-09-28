@@ -1,3 +1,6 @@
+/* *:focus {
+  background: transparent;
+} */
 body {
   font-size: 16px;
   background-color: rgb(255, 255, 255);
@@ -37,30 +40,28 @@ nav ul li a {
 nav header i {
   background-color: rgb(255, 255, 255);
 }
-.input {
-  position: relative;
-  display: flex;
-}
-div.input .search-box {
-  border: 3px solid black;
-}
-nav .input-field {
-  margin-top: 10px;
-  background-color: #f5f4f2;
-  height: auto;
-}
+
 .btn-large {
   padding-top: 10px;
   padding-bottom: 10px;
 }
-/* nav .input-field:hover:active:focus {
-  margin-top: 10px;
+
+.firstbar-box {
+  height: 40px;
+  margin-top: 12px;
+}
+
+.firstbar {
+  margin-right: 20px;
   background-color: #f5f4f2;
-  height: auto;
-} */
-.input i {
-  position: absolute;
-  left: 3px;
+  border-radius: 9999px;
+}
+#search1 {
+  background-color: #f5f4f2;
+  border-radius: 9999px;
+}
+nav .input-field label {
+  top: -9px;
 }
 .s-kits {
   margin-right: auto;
@@ -95,13 +96,7 @@ ul.nav-mobile {
 .let-your {
   color: rgb(255, 255, 255);
 }
-/* .get-started {
-  border-radius: 9999px;
-  background-color: rgb(255, 66, 77);
-  display: inline;
-  text-transform: capitalize;
-  letter-spacing: 0.1rem;
-} */
+
 .btn {
   border-radius: 9999px;
   background-color: rgb(255, 66, 77);
@@ -142,7 +137,20 @@ ul.nav-mobile {
 }
 
 /* second-section */
+.secondbar-box {
+  display: flex;
+}
+.secondbar {
+  flex-basis: 80%;
+  margin-right: 20px;
+  padding: 2px;
+  background-color: #f5f4f2;
+  border-radius: 9999px;
+}
 
+#search2 {
+  background-color: #f5f4f2;
+}
 .creators-patreon {
   flex-basis: 100%;
   display: flex;
@@ -172,18 +180,6 @@ ul.nav-mobile {
   margin: auto;
 }
 
-/* forth-section  */
-
-/* .forth-section .container {
-  display: flex;
-  width: 100%;
-} */
-/* .develop {
-  width: 60%;
-}
-.mikki {
-  width: 40%;e
-} */
 .box-creators {
   width: 100%;
   display: flex;
@@ -295,12 +291,7 @@ ul.nav-mobile {
   .nav-mobile {
     display: flex;
   }
-  .input {
-    width: 100%;
-    background: white;
-    padding: 0px;
-    margin: 0px;
-  }
+
   .page-footer .container {
     width: 100%;
     padding: 2rem;
