@@ -70,6 +70,7 @@ nav header i {
 
 nav ul a.btn {
   margin: 0;
+
   border: 2px solid rgb(255, 66, 77);
 }
 nav ul a.btn:hover {
@@ -118,6 +119,12 @@ nav .input-field label {
   top: -17px;
 }
 
+nav .sidenav-trigger {
+  float: none;
+  position: absolute;
+  top: 0px;
+  right: -3px;
+}
 /* landing section */
 .landing {
   background: #141518;
@@ -366,11 +373,17 @@ article.card {
   .login-area {
     display: none;
   }
+  nav ul a.btn {
+    margin-right: 45px;
+  }
   .nav-mobile {
     display: flex;
     flex-direction: column;
     padding-right: 8px;
     padding-left: 5px;
+  }
+  nav a.sidenav-trigger {
+    display: unset;
   }
   .mobile-icon {
     color: black;
@@ -459,5 +472,17 @@ article.card {
 @media screen and (max-width: 767px) {
   .fifth-section .container {
     flex-direction: column;
+  }
+}
+@media screen and (max-width: 992px) {
+  .div-gif i {
+    top: 24%;
+    left: 36%;
+  }
+}
+@media screen and (max-width: 415px) {
+  .div-gif i {
+    top: 24%;
+    left: 36%;
   }
 }
