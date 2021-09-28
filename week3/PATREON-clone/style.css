@@ -46,8 +46,6 @@ nav ul {
   display: flex;
   flex-direction: row;
   width: 100%;
-}
-nav ul {
   list-style: none;
 }
 
@@ -125,6 +123,10 @@ nav .sidenav-trigger {
   top: 0px;
   right: -3px;
 }
+
+.dropdown-content {
+  top: -65px;
+}
 /* landing section */
 .landing {
   background: #141518;
@@ -179,7 +181,7 @@ nav .sidenav-trigger {
   color: #ff434d;
 }
 
-/* I couldn't put play icon on the middle for all devices ***********/
+/* I couldn't put the play icon on the middle for all devices ***********/
 
 /* second-section */
 .second-section {
@@ -206,10 +208,6 @@ nav .sidenav-trigger {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-}
-
-.second-sbar {
-  display: flex;
 }
 
 /* third-section  */

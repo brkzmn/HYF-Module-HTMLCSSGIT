@@ -27,12 +27,12 @@
         
 
                     <ul class="nav-desktop">
-                        <li><i class="fab fa-patreon fa-sx red-text"></i> </li>
-                        <li><a class="dropdown-trigger" data-target="dropdown1" href="#">Product <i class="fas fa-chevron-down fa-xs"></i></a></li>
-                        <li><a href="">For creators <i class="fas fa-chevron-down fa-xs"></i></a></li>
-                        <li><a href="">Pricing</a></li>
-                        <li><a href="">Resorces <i class="fas fa-chevron-down fa-xs"></i></a></li>
-                        <li><a href="">Starter kits</a></li>
+                        <li><i class="fab fa-patreon fa-sx red-text"></i></li>
+                        <li><a class="dropdown-trigger" href="#" data-target="dropdown1">Product <i class="fas fa-chevron-down fa-xs"></i></a></li>
+                        <li><a class="dropdown-trigger" href="#" data-target="dropdown2">For creators <i class="fas fa-chevron-down fa-xs"></i></a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a class="dropdown-trigger" href="#" data-target="dropdown3">Resorces <i class="fas fa-chevron-down fa-xs"></i></a></li>
+                        <li><a href="#">Starter kits</a></li>
 
                     </ul>
                     <div class="login-area">
@@ -48,7 +48,7 @@
                                     </form>
                                 </div>
                             </li>
-                            <li>Log In</li>
+                            <li><a href="#">Log In</a></li>
                             <li><a href="#" class="btn z-depth-0">Create on Patreon</a></li>
                         </ul>
                         
@@ -58,9 +58,9 @@
                     <div id="mobile-navbar " class="nav-mobile">
                         <ul>
                             <li class="mobile-icon"><i class="fab fa-patreon fa-sx red-text"></i></li>
-                            <li>Log In</li>
+                            <li><a href="#">Log In</a></li>
                             <li><a href="#" class="btn z-depth-0">Create on Patreon</a></li>
-                            <!-- <li><i class="material-icons black-text">menu</i></li> -->
+
 
                         </ul>
                         <div class="nav-wrapper thirdbar-box">
@@ -96,10 +96,32 @@
         
         
     </ul>
+    <ul id='dropdown1' class='dropdown-content'>
+        <li><a href="#">Lite</a></li>
+        <li><a href="#">Pro</a></li>
+        <li><a href="#">Premium</a></li>
+      </ul>
+      <ul id='dropdown2' class='dropdown-content'>
+        <li><a href="#">Podcasters</a></li>
+        <li><a href="#">Video Creators</a></li>
+        <li><a href="#">Musicians</a></li>
+        <li><a href="#">Visual Artists</a></li>
+        <li><a href="#">Communities</a></li>
+        <li><a href="#">Writers & Journalists</a></li>
+        <li><a href="#">Gaming Creators</a></li>
+        <li><a href="#">Non-profits</a></li>
+        <li><a href="#">Tutorials and Education</a></li>
+        <li><a href="#">Local Businesses</a></li>
+      </ul>
+      <ul id='dropdown3' class='dropdown-content'>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Creator community</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Patreon U</a></li>
+        <li><a href="#">App Directory</a></li>
+        <li><a href="#">Help Centre & FAQ</a></li>
+      </ul>
     <main>
-
-
-    
 
 
         <section class="landing">
@@ -112,7 +134,7 @@
                 </div>
                 <div class="div-gif">
                     <div>
-                        <img class="responsive-img" src="header-gif.gif" alt="gif">
+                        <img class="responsive-img" src="./images/header-gif.gif" alt="gif">
                         <i class="material-icons play">play_circle_filled</i>
 
                     </div>
@@ -353,19 +375,16 @@
         M.Sidenav.init(sideNav, {});
 
 
-        // document.addEventListener('DOMContentLoaded', function() {
-        //     var elems = document.querySelectorAll('.dropdown-trigger');
-        //     var instances = M.Dropdown.init(elems, options);
-        // });
-        // M.AutoInit();
+        document.addEventListener('DOMContentLoaded', function() {
+            var drop = document.querySelectorAll('.dropdown-trigger');
+            var instances = M.Dropdown.init(drop, {
+                hover	: true
+
+            });
+        });
+
 
     </script>
-    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
-    <script>
-        // $('.dropdown-trigger').dropdown();
-    </script>
-
-    
     
     
 </body>
