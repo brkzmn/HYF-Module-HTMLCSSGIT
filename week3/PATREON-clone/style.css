@@ -92,12 +92,9 @@ nav ul a.btn:hover {
   border-radius: 9999px;
 }
 
-/* I could not change the values ​​originating from the framework. I used id to do this. */
+/* I could not change the values ​​originating from Materialize CSS. I used id's to do this. */
 nav .input-field label {
   top: -9px;
-}
-.s-kits {
-  margin-right: auto;
 }
 
 /* mobile navbar */
@@ -174,6 +171,8 @@ nav .input-field label {
   left: 45%;
   color: #ff434d;
 }
+
+/* I couldn't put play icon on the middle for all devices ***********/
 
 /* second-section */
 .second-section {

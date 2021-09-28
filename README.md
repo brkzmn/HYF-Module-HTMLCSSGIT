@@ -13,3 +13,7 @@ https://brkzmn.github.io/HYF-Module-HTMLCSSGIT/week2/
 ### GIT exercise: animals repository
 
 https://github.com/brkzmn/animals/tree/master
+
+## PROJECT: Responsive website - PATREON-clone
+
+https://brkzmn.github.io/HYF-Module-HTMLCSSGIT/week3/PATREON-clone/
