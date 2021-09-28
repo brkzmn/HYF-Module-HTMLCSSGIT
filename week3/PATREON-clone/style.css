@@ -37,6 +37,31 @@ nav ul li a {
 nav header i {
   background-color: rgb(255, 255, 255);
 }
+.input {
+  position: relative;
+  display: flex;
+}
+div.input .search-box {
+  border: 3px solid black;
+}
+nav .input-field {
+  margin-top: 10px;
+  background-color: #f5f4f2;
+  height: auto;
+}
+.btn-large {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+/* nav .input-field:hover:active:focus {
+  margin-top: 10px;
+  background-color: #f5f4f2;
+  height: auto;
+} */
+.input i {
+  position: absolute;
+  left: 3px;
+}
 .s-kits {
   margin-right: auto;
 }
@@ -51,9 +76,9 @@ nav header i {
   background-color: rgb(255, 66, 77);
   display: inline;
 }
-.input {
+/* .input {
   align-self: flex-end;
-}
+} */
 .nav-mobile {
   display: none;
 }
